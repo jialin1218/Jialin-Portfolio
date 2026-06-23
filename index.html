@@ -211,32 +211,6 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
   .rm-conn{width:3px;height:36px;margin:0}
   .rm-conn::after{content:'↓';top:auto;right:-12px;bottom:-12px}
 }
-
-/* ── 针对 PDF 导出的打印优化样式 ── */
-@media print {
-  /* 强制打印背景色和渐变色 */
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  
-  /* 核心设置：防止同一个 section 被从中间截断分页 */
-  section {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
-  /* 隐藏在 PDF 中无用的悬浮导航栏 */
-  .nav {
-    display: none !important;
-  }
-  
-  /* 强制取消滚动加载动画，确保导出为 PDF 时所有内容处于显示状态 */
-  .rv {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
 </style>
 </head>
 <body>
@@ -246,6 +220,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
   <div class="nav-dots" id="navDots"></div>
 </nav>
 
+<!-- S1 COVER -->
 <section id="s1">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="inner" style="text-align:center">
@@ -266,6 +241,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,18 C240,36 480,0 720,18 C960,36 1200,0 1440,18 L1440,36 L0,36 Z" fill="#ffffff"/></svg></div>
 
+<!-- S2 ABOUT -->
 <section id="s2">
   <div class="inner">
     <div class="pill rv">✦ About Me</div>
@@ -293,6 +269,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0 C360,36 720,0 1080,28 C1260,38 1380,6 1440,0 L1440,36 L0,36 Z" fill="var(--purple-bg)"/></svg></div>
 
+<!-- S3 CONTENTS -->
 <section id="s3">
   <div class="inner">
     <div class="s3-head rv">
@@ -327,15 +304,18 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
     </div>
     <div class="rv">
       
+      <!-- 第二部分：垂类内容精细化运营 -->
       <div class="prow">
         <div class="pname"><div class="pname-txt">垂类内容<br>精细化运营</div></div>
         
+        <!-- 修改点：加入 display: flex; flex-direction: column; justify-content: center; 实现垂直居中 -->
         <div class="icell ins" style="position:relative; display: flex; flex-direction: column; justify-content: center;">
           <div class="icell-lbl">Insight</div>
           <div class="icell-txt">深度拆解本土国民休闲生活方式—钓鱼文化</div>
           <div class="iarr">→</div>
         </div>
         
+        <!-- 修改点：同上，实现垂直居中 -->
         <div class="icell act" style="position:relative; display: flex; flex-direction: column; justify-content: center;">
           <div class="icell-lbl">Action</div>
           <div class="icell-txt">从泛装备展示转向细分场景+专业内容表达，强化垂类内容深度</div>
@@ -352,15 +332,18 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
         </div>
       </div>
       
+      <!-- 第三部分：原生内容创意升级 -->
       <div class="prow">
         <div class="pname"><div class="pname-txt">原生内容<br>创意升级</div></div>
         
+        <!-- 修改点：加入 display: flex; flex-direction: column; justify-content: center; 实现垂直居中 -->
         <div class="icell ins" style="position:relative; display: flex; flex-direction: column; justify-content: center;">
           <div class="icell-lbl">Insight</div>
           <div class="icell-txt">用户对强广告表达产生疲劳，更偏好真实、自然、有情境的原生内容</div>
           <div class="iarr">→</div>
         </div>
         
+        <!-- 修改点：同上，实现垂直居中 -->
         <div class="icell act" style="position:relative; display: flex; flex-direction: column; justify-content: center;">
           <div class="icell-lbl">Action</div>
           <div class="icell-txt">由传统棚拍广告转向本土生活场景 + 轻剧情内容，提升内容原生感</div>
@@ -381,6 +364,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
     </div>
   </div>
 </section>
+<!-- S5 USA -->
 <section id="s5" style="padding:68px 48px 56px">
   <div class="flag-bg"></div>
   <div class="inner">
@@ -403,6 +387,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,18 C480,0 960,36 1440,18 L1440,36 L0,36 Z" fill="#ffffff"/></svg></div>
 
+<!-- S6 REPLICABLE -->
 <section id="s6">
   <div class="inner">
     <div class="pill rv">02 · 可复制爆款能力</div>
@@ -473,6 +458,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0 C360,36 720,0 1080,28 C1260,40 1380,5 1440,0 L1440,36 L0,36 Z" fill="var(--purple-bg)"/></svg></div>
 
+<!-- S7 CROSS DEPT -->
 <section id="s7">
   <div class="inner">
     <div class="rv">
@@ -514,10 +500,12 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,24 C480,0 960,36 1440,14 L1440,36 L0,36 Z" fill="#ffffff"/></svg></div>
 
+<!-- S8 GALLERY -->
 <section id="s8">
   <div class="inner">
     <div class="s8-title rv">🖼️ 视觉与内容库</div>
     <div class="gg rv">
+      <!-- Row 1 -->
       <div class="gc">
         <img src="剧情1.png" alt="剧情短片">
         <div class="gc-info"><div class="gc-lbl">🎬 本土化-剧情短片</div></div>
@@ -535,6 +523,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
         <div class="gc-info"><div class="gc-lbl">🤝 本土化-达人合作</div></div>
       </div>
       
+      <!-- Row 2 -->
       <div class="gc">
         <img src="工具房.png" alt="工具房场景">
         <div class="gc-info"><div class="gc-lbl">🛠️ 本土化-使用场景</div></div>
@@ -552,6 +541,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
         <div class="gc-info"><div class="gc-lbl">🤖 AI创意测试</div></div>
       </div>
 
+      <!-- Row 3 (Wide Items - 便当盒错落布局) -->
       <div class="gc wide">
         <img src="场景化.png" alt="场景化视觉">
         <div class="gc-info"><div class="gc-lbl">💡 场景化视觉</div></div>
@@ -566,6 +556,7 @@ section{width:100%;padding:68px 48px 56px;display:flex;justify-content:center;po
 
 <div class="wsep"><svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,8 C360,36 720,0 1080,28 C1300,42 1400,4 1440,14 L1440,36 L0,36 Z" fill="var(--purple-bg)"/></svg></div>
 
+<!-- S9 THANK YOU -->
 <section id="s9">
   <div class="blob b1" style="opacity:.45"></div>
   <div class="blob b2" style="opacity:.45"></div>
